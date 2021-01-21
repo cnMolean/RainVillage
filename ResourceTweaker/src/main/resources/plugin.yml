@@ -1,0 +1,6 @@
+name: ResourceTweaker
+version: 1.0-SNAPSHOT
+main: com.molean.rainvillage.resourcetweaker.ResourceTweaker
+api-version: 1.13
+commands:
+  spawn: {}

@@ -1,0 +1,15 @@
+name: SurvivalTweaker
+version: 1.0-SNAPSHOT
+main: com.molean.rainvillage.survivaltweaker.SurvivalTweaker
+api-version: 1.16
+commands:
+  spawn: {}
+  menu: {}
+  resource:
+    permission: survivaltweaker.resource
+  book:
+    permission: survivaltweaker.book
+  more:
+    permission: survivaltweaker.more
+  lore:
+    permission: survivaltweaker.lore
