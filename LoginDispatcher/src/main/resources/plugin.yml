@@ -1,0 +1,7 @@
+name: AutoDispatcher
+version: 1.0-SNAPSHOT
+main: com.molean.rainvillage.logindispatcher.LoginDispatcher
+api-version: 1.16
+commands:
+  survival: { }
+  dispatcher: { }
