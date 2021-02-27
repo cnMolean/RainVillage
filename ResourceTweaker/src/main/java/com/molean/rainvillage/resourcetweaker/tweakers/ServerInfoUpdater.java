@@ -9,6 +9,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.messaging.PluginMessageListener;
+
+import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,6 +40,7 @@ public class ServerInfoUpdater implements PluginMessageListener {
     }
 
     public ServerInfoUpdater() {
+        serverName = new File(System.getProperty("user.dir")).getName();
         Bukkit.getMessenger().registerIncomingPluginChannel(JavaPlugin.getPlugin(ResourceTweaker.class), "BungeeCord", this);
         getScheduler().runTaskTimerAsynchronously(JavaPlugin.getPlugin(ResourceTweaker.class), ServerInfoUpdater::updates, 20, 20);
     }

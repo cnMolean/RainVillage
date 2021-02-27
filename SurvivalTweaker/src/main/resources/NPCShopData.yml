@@ -1,0 +1,14 @@
+shop:
+  DIAMOND:
+    RecordDate: 2021-01-21
+    PurchaseAmount: 60
+    PlayerData:
+      Molean:
+        RecordDate: 2021-01-22
+        SellAmountInDay: 10
+        SellAmount: 30
+      MeltDoll:
+        RecordDate: 2021-01-22
+        SellAmountInDay: 10
+        SellAmount: 30
+

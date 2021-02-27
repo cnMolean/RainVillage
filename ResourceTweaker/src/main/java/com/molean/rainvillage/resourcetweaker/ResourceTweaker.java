@@ -10,12 +10,16 @@ public class ResourceTweaker extends JavaPlugin {
     @Override
     public void onEnable() {
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
+        new ServerInfoUpdater();
         ConfigUtils.setupConfig(this);
-        new MobStrengthen();
+
+
+        if (!ServerInfoUpdater.getServerName().equalsIgnoreCase("resource1")) {
+            new MobStrengthen();
+        }
         new VanillaDamageModifier();
         new HungerKeeper();
         new MineLimit();
-        new ServerInfoUpdater();
         new ChatTweaker();
         new ReturnSurvival();
         new VanillaDamageModifier();
@@ -24,7 +28,8 @@ public class ResourceTweaker extends JavaPlugin {
         new VanillaDamageModifier();
         new RandomRespawnPoint();
         new CancelRaid();
-        new ModifyLootTable();
         new DropLimit();
+        new FishingLimit();
+        new NoVillageTrader();
     }
 }

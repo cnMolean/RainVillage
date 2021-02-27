@@ -2,7 +2,6 @@ package com.molean.rainvillage.survivaltweaker.utils;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
-import com.molean.rainvillage.survivaltweaker.menu.settings.biome.LocalBiome;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -46,7 +45,7 @@ public class SkullUtils {
         if (properties == null) {
             properties = new Properties();
             try {
-                properties.load(LocalBiome.class.getClassLoader().getResourceAsStream("skulls.properties"));
+                properties.load(SkullUtils.class.getClassLoader().getResourceAsStream("skulls.properties"));
             } catch (IOException e) {
                 e.printStackTrace();
             }

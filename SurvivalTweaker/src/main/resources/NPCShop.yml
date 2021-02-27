@@ -1,0 +1,16 @@
+example:
+  npc: 1
+  title: 我
+  items:
+    DIAMOND:
+      title: 钻石
+      price: 10.0
+      maxPerDay: 100
+      maxPerPlayerPerDay: 20
+      maxPerPlayer: 99999
+    EMERALD:
+      title: 钻石
+      price: 10.0
+      maxPerDay: 100
+      maxPerPlayerPerDay: 20
+      maxPerPlayer: 99999

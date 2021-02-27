@@ -1,8 +1,6 @@
 package com.molean.rainvillage.survivaltweaker.tweakers;
 
 import com.molean.rainvillage.survivaltweaker.SurvivalTweaker;
-import com.molean.rainvillage.survivaltweaker.menu.MainMenu;
-import com.molean.rainvillage.survivaltweaker.menu.PlotMenu;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -43,8 +41,8 @@ public class ClockMenu implements CommandExecutor, Listener {
                 }
 
             } else {
-                Bukkit.getScheduler().runTaskAsynchronously(JavaPlugin.getPlugin(SurvivalTweaker.class),
-                        () -> new MainMenu((Player) sender).open());
+//                Bukkit.getScheduler().runTaskAsynchronously(JavaPlugin.getPlugin(SurvivalTweaker.class),
+//                        () -> new MainMenu((Player) sender).open());
             }
         }
 

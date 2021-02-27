@@ -1,6 +1,5 @@
 package com.molean.rainvillage.rainvillagetweaker;
 
-import com.molean.rainvillage.rainvillagetweaker.tweakers.JoinLeftMessage;
 import net.md_5.bungee.api.plugin.Plugin;
 
 public final class RainVillageTweaker extends Plugin {
@@ -16,6 +15,9 @@ public final class RainVillageTweaker extends Plugin {
     public void onEnable() {
         plugin = this;
         new JoinLeftMessage();
+        new SkinSync();
+        new UniversalChat();
+        new Robot();
 
     }
 

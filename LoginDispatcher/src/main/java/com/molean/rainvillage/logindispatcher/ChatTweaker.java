@@ -1,9 +1,8 @@
-package com.molean.rainvillage.resourcetweaker.tweakers;
+package com.molean.rainvillage.logindispatcher;
 
 
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
-import com.molean.rainvillage.resourcetweaker.ResourceTweaker;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -13,20 +12,18 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
-import java.io.File;
 import java.io.IOException;
 
 public class ChatTweaker implements Listener {
     public ChatTweaker() {
-        Bukkit.getPluginManager().registerEvents(this, JavaPlugin.getPlugin(ResourceTweaker.class));
+        Bukkit.getPluginManager().registerEvents(this, JavaPlugin.getPlugin(LoginDispatcher.class));
     }
 
     @EventHandler
     public void on(AsyncPlayerChatEvent event) {
         event.setCancelled(true);
-        universalChat(event.getPlayer(), event.getMessage());
+        universalChat(event.getPlayer(),event.getMessage());
     }
-
     public static void universalChat(Player player, String message) {
         try {
             @SuppressWarnings("all") ByteArrayDataOutput out = ByteStreams.newDataOutput();
@@ -37,10 +34,10 @@ public class ChatTweaker implements Listener {
             DataOutputStream msgout = new DataOutputStream(msgbytes);
             msgout.writeUTF(player.getName());
             msgout.writeUTF(message);
-            msgout.writeUTF(new File(System.getProperty("user.dir")).getName());
+            msgout.writeUTF("login");
             out.writeShort(msgbytes.toByteArray().length);
             out.write(msgbytes.toByteArray());
-            player.sendPluginMessage(JavaPlugin.getPlugin(ResourceTweaker.class), "BungeeCord", out.toByteArray());
+            player.sendPluginMessage(JavaPlugin.getPlugin(LoginDispatcher.class), "BungeeCord", out.toByteArray());
         } catch (IOException exception) {
             exception.printStackTrace();
         }

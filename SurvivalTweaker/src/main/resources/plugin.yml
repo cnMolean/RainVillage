@@ -7,6 +7,8 @@ commands:
   menu: {}
   resource:
     permission: survivaltweaker.resource
+  resource2:
+    permission: survivaltweaker.resource2
   book:
     permission: survivaltweaker.book
   more:
